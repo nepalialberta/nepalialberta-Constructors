@@ -15,7 +15,7 @@
  **/
 public class Player {
     public String playerName;
-    public int level;
+    public int level = 1;
 
     /**
      * this.playerName should be set to playerName.
@@ -30,7 +30,9 @@ public class Player {
      *
      * @param playerName the name of the player to be created.
      */
-    public Player(String playerName){
+     public Player(String playerName){
+        this.playerName=playerName;
+        
 
     }
 
@@ -47,8 +49,20 @@ public class Player {
      * @param playerName the name of the player to be created.
      * @param level the starting level of the player to be created.
      */
-    public Player(String playerName, int level){
+     public Player(String playerName, int level){
 
+        this.playerName=playerName;
+        this.level=level;  
     }
+  
+
+    public static void main(String[] args){
+        Player pl = new Player("Mario", 1);
+        System.out.println("The player name is  :" + pl.playerName + " "+ pl.level);
+
+
+      
+    }
+
 
 }
